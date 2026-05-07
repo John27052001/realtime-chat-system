@@ -61,7 +61,7 @@ realtime-chat-system/
 
 ```bash
 git clone https://github.com/John27052001/realtime-chat-system.git
-cd realtime-chat-system
+cd realtime-chat-system```
 
 ### 2. Backend setup
 
