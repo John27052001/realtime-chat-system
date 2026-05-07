@@ -71,6 +71,7 @@ npm install
 Create .env file:
 
 PORT=5000
+
 MONGO_URI=mongodb+srv://chatuser:ChatApp123@cluster0.mn9dkgm.mongodb.net/realtime-chat
 
 Run backend:
