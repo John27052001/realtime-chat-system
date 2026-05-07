@@ -14,6 +14,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://realtime-chat-system-blue.vercel.app",
+  "https://realtime-chat-system-f1easgi4g-meghajohnbabu-6318s-projects.vercel.app",
 ];
 
 app.use(
