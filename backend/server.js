@@ -11,7 +11,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://realtime-chat-system-blue.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
@@ -30,8 +41,9 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
@@ -45,7 +57,7 @@ io.on("connection", (socket) => {
     console.log("User joined:", userId);
   });
 
-  socket.on("sendMessage", ({ sender, receiver, text }) => {
+  socket.on("sendMessage", ({ sender, receiver, text, createdAt }) => {
     const receiverSocketId = users[receiver];
 
     if (receiverSocketId) {
@@ -53,16 +65,19 @@ io.on("connection", (socket) => {
         sender,
         receiver,
         text,
+        createdAt,
       });
     }
   });
-socket.on("typing", (receiver) => {
-  const receiverSocketId = users[receiver];
 
-  if (receiverSocketId) {
-    io.to(receiverSocketId).emit("typing");
-  }
-});
+  socket.on("typing", (receiver) => {
+    const receiverSocketId = users[receiver];
+
+    if (receiverSocketId) {
+      io.to(receiverSocketId).emit("typing");
+    }
+  });
+
   socket.on("disconnect", () => {
     console.log("User disconnected:", socket.id);
   });
