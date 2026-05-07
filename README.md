@@ -62,9 +62,11 @@ realtime-chat-system/
 ```bash
 git clone https://github.com/John27052001/realtime-chat-system.git
 cd realtime-chat-system
-2. Backend setup
-cd backend
-npm install
+
+### 2. Backend setup
+
+```cd backend
+npm install```
 
 Create .env file:
 
@@ -72,12 +74,12 @@ PORT=5000
 MONGO_URI=your_mongodb_connection_string
 
 Run backend:
+npm run dev
 
-npm run dev
-3. Frontend setup
-cd frontend
+### 3. Frontend setup
+```cd frontend
 npm install
-npm run dev
+npm run dev```
 🌐 Environment Variables
 Frontend (.env in Vite)
 VITE_API_URL=http://localhost:5000
