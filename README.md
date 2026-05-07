@@ -1,4 +1,3 @@
-cat << 'EOF' > README.md
 # 💬 Real-Time Chat Application
 
 A full-stack real-time chat application built using **React, Node.js, Express, MongoDB, and Socket.io**.
@@ -59,6 +58,7 @@ realtime-chat-system/
 ### 1. Clone the repo
 
 git clone https://github.com/John27052001/realtime-chat-system.git
+
 cd realtime-chat-system
 
 ---
@@ -71,7 +71,7 @@ npm install
 Create .env file:
 
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb+srv://chatuser:ChatApp123@cluster0.mn9dkgm.mongodb.net/realtime-chat
 
 Run backend:
 
@@ -95,7 +95,7 @@ VITE_API_URL=http://localhost:5000
 
 Backend:
 
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb+srv://chatuser:ChatApp123@cluster0.mn9dkgm.mongodb.net/realtime-chat
 
 ---
 
