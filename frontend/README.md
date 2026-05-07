@@ -1,16 +1,113 @@
-# React + Vite
+# 💬 Real-Time Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack real-time chat application built using **React, Node.js, Express, MongoDB, and Socket.io**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 🔐 User Authentication (Signup/Login)
+- 💬 Real-time messaging using Socket.io
+- 👥 User list (chat with any user)
+- 🕒 Message timestamps
+- 💾 Persistent chat history (MongoDB)
+- ✍️ Typing indicator
+- 🟢 Online status indicator (UI)
+- 🎨 Modern responsive UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend
+- React (Vite)
+- Axios
+- Socket.io-client
+- CSS (custom styling)
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- Socket.io
+- JWT Authentication
+- bcrypt (password hashing)
+
+---
+
+## 📦 Project Structure
+realtime-chat-system/
+│
+├── backend/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ └── server.js
+│
+├── frontend/
+│ ├── src/
+│ └── App.jsx
+│
+└── README.md
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/YOUR_USERNAME/realtime-chat-system.git
+cd realtime-chat-system
+
+2. Backend setup
+cd backend
+npm install
+
+Create .env file:
+
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+
+Run backend:
+npm run dev
+
+3. Frontend setup
+cd frontend
+npm install
+npm run dev
+🌐 Environment Variables
+
+Frontend (.env in Vite):
+
+VITE_API_URL=http://localhost:5000
+
+Backend:
+
+MONGO_URI=your_mongodb_connection_string
+
+🔑 Demo Credentials
+
+You can create your own account OR use:
+
+Email: john@example.com
+Password: 123456
+
+Email: test2@example.com
+Password: 123456
+
+🚀 Deployment
+Backend: Render
+Frontend: Vercel
+💡 Future Improvements
+✅ Message read receipts
+✅ Online/offline real status
+✅ Image/file sharing
+✅ Notifications
+✅ Mobile responsive improvements
+👨‍💻 Author
+
+Megha John
+
+GitHub: https://github.com/John27052001
